@@ -1,3 +1,5 @@
 *.pbf filter=lfs diff=lfs merge=lfs -text
+Geo/*.obj filter=lfs diff=lfs merge=lfs -text
+Geo/*.pbf filter=lfs diff=lfs merge=lfs -text
 Geo/OTPreq/graph.obj filter=lfs diff=lfs merge=lfs -text
 Geo/slovenia-latest.osm.pbf filter=lfs diff=lfs merge=lfs -text

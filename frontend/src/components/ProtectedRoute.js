@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
@@ -7,15 +7,15 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/student/me', {
-          credentials: 'include'
+        const res = await fetch("http://localhost:5000/api/student/me", {
+          credentials: "include",
         });
         if (!res.ok) {
-          navigate('/auth'); // redirect to login if not logged in
+          navigate("/auth");
         }
       } catch (err) {
         console.error(err);
-        navigate('/auth');
+        navigate("/auth");
       }
     };
     checkAuth();

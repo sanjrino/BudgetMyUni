@@ -64,4 +64,13 @@ router.post('/register', async (req, res) => {
   }
 });
 
+router.get('/me', (req, res) => {
+  if (!req.session.userId) return res.json({ loggedIn: false });
+  res.json({
+    loggedIn: true,
+    user: { id: req.session.userId, nickname: req.session.nickname }
+  });
+});
+
+
 module.exports = router;

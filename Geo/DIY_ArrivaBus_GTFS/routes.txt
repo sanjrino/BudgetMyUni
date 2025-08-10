@@ -1,0 +1,2 @@
+route_id,agency_id,route_short_name,route_long_name,route_type
+R1,ARRIVA,1,Koper — Koper Tržnica — Izola — Izola reš.pos. — Simonov zaliv — Belvedere — Strunjan — Lucija TPC,3

@@ -1,0 +1,5 @@
+https://photon.komoot.io/api/?q=famnit=upr
+https://docs.opentripplanner.org/en/dev-2.x/Container-Image/
+https://hub.docker.com/r/opentripplanner/opentripplanner
+https://podatki.gov.si/dataset/avtobusna-postajalisca-v-obcini-izola
+https://podatki.gov.si/dataset/avtobusna-postajalisca-mestnega-prometa-v-mestni-obcini-koper

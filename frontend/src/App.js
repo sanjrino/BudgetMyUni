@@ -1,12 +1,18 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import LandingPage from './pages/LandingPage';
-import AuthPage from './pages/AuthPage';
-import DashboardPage from './pages/DashboardPage';
-import PreferencePage from './pages/PreferencePage';
-import TopNavBar from './components/TopNavBar';
-import ProtectedRoute from './components/ProtectedRoute';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import LandingPage from "./pages/LandingPage";
+import AuthPage from "./pages/AuthPage";
+import DashboardPage from "./pages/DashboardPage";
+import PreferencePage from "./pages/PreferencePage";
+import TopNavBar from "./components/TopNavBar";
+import ProtectedRoute from "./components/ProtectedRoute";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import CommunityPage from "./pages/CommunityPage";
 
 function App() {
   return (
@@ -31,7 +37,10 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="*" element={<Navigate to="/" />} />
+
+        <Route path="/community" element={<CommunityPage />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

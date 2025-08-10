@@ -12,7 +12,6 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
-
 app.use(session({
   secret: 'yourSuperSecretKey',
   resave: false,
@@ -23,19 +22,22 @@ app.use(session({
   }
 }));
 
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/student', require('./routes/student'));
+app.use('/api/university', require('./routes/university'));
+app.use('/api/habits', require('./routes/habits'));
+app.use('/api/food', require('./routes/food'));
+app.use('/api/otp', require('./routes/otp'));
+app.use('/api/geocode', require('./routes/geocode'));
+app.use('/api/student/places', require('./routes/studentPlaces'));
+app.use('/api/dorms', require('./routes/dorms'));
+app.use('/api/commute', require('./routes/commute'));
+app.use('/api/tips', require('./routes/tips'));
 
-const authRoutes = require('./routes/auth');
-const studentRoutes = require('./routes/student');
 
-app.use('/api/auth', authRoutes);
-app.use('/api/student', studentRoutes);
+app.get('/health', (_req, res) => res.json({ ok: true }));
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-const universityRoutes = require('./routes/university');
-app.use('/api/university', universityRoutes);
-const habitsRoutes = require('./routes/habits');
-app.use('/api/habits', habitsRoutes);
-const foodRoutes = require('./routes/food');
-app.use('/api/food', foodRoutes);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

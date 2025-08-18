@@ -2,7 +2,7 @@
 
 Systems 3 project
 
-Check it out on [here]([url](https://budgetmyuni.sanjrino.com/))
+Check it out https://budgetmyuni.sanjrino.com/
 
 Separate backend and frontend information system coded with node and react.
 Database is mysql in a docker, and also has OTP in the docker, all running on proxmox ubuntu server vm.
